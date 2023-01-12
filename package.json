@@ -1,0 +1,72 @@
+{
+    "name": "starpass_review",
+    "version": "1.0.0",
+    "description": "reviewing UNCHAIN star tests",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shiftbase-inc/STARPASS-review.git"
+    },
+    "keywords": [],
+    "author": "SHØ <neila@users.noreply.github.com> (http://akxra.art/)",
+    "contributors": [
+        "SHØ <neila@users.noreply.github.com> (http://akxra.art/)",
+        "ryojiroakiyama <ryojiro25@gmail.com> (https://github.com/ryojiroakiyama)"
+    ],
+    "license": "UNLICENSED",
+    "bugs": {
+        "url": "https://github.com/shiftbase-inc/STARPASS-review/issues"
+    },
+    "homepage": "https://github.com/shiftbase-inc/STARPASS-review#readme",
+    "devDependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+        "@nomiclabs/hardhat-ethers": "^2.0.6",
+        "@nomiclabs/hardhat-etherscan": "^3.1.0",
+        "@nomiclabs/hardhat-waffle": "^2.0.3",
+        "@openzeppelin/hardhat-upgrades": "^1.19.0",
+        "@openzeppelin/test-helpers": "^0.5.16",
+        "@trivago/prettier-plugin-sort-imports": "^3.4.0",
+        "@typechain/ethers-v5": "^10.1.0",
+        "@typechain/hardhat": "^6.1.2",
+        "@types/chai": "^4.3.3",
+        "@types/mocha": "^10.0.0",
+        "@types/node": "^18.8.1",
+        "@typescript-eslint/eslint-plugin": "^4.33.0",
+        "@typescript-eslint/parser": "^4.33.0",
+        "chai": "^4.3.6",
+        "dotenv": "^16.0.1",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^3.4.1",
+        "eslint-plugin-promise": "^5.2.0",
+        "ethereum-waffle": "^3.4.4",
+        "ethers": "^5.6.9",
+        "hardhat": "^2.9.9",
+        "hardhat-gas-reporter": "^1.0.8",
+        "prettier": "^2.7.1",
+        "prettier-plugin-solidity": "^1.0.0-beta.13",
+        "solhint": "^3.3.7",
+        "solidity-coverage": "^0.7.21",
+        "ts-node": "^10.9.1",
+        "typechain": "^8.1.0",
+        "typescript": "^4.8.4"
+    },
+    "dependencies": {
+        "@nomicfoundation/hardhat-network-helpers": "^1.0.6",
+        "@openzeppelin/contracts": "^4.7.3"
+    },
+    "scripts": {
+        "lint": "eslint --fix test/** scripts/**",
+        "prettier:check": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .gitignore  --ignore-path .prettierignore --check .",
+        "prettier:format": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .gitignore --ignore-path .prettierignore --write .", 
+        "solhint:check": "solhint --fix --max-warnings 0 \"contracts/**/*.sol\"",
+        "prepush": "yarn lint && yarn prettier:check && yarn solhint:check",
+        "typechain": "npx hardhat typechain && yarn prettier:format",
+        "test:soc": "npx hardhat test test/SocialNetwork.ts",
+        "test:med": "npx hardhat test test/Medical.ts",
+        "test:gov": "npx hardhat test test/Government.ts"
+    }
+}
