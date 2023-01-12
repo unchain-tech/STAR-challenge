@@ -9,11 +9,11 @@ contract SocialNetwork is ISocialNetwork {
     uint256 private _id;
     uint256 private _likes;
 
-    function post(string memory _message) external{
+    function post(string memory _message) external {
         _messageStore = _message;
     }
 
-    function getLastPostId() external view returns (uint256){
+    function getLastPostId() external view returns (uint256) {
         return _id;
     }
 
@@ -24,17 +24,18 @@ contract SocialNetwork is ISocialNetwork {
             string memory message,
             uint256 totalLikes,
             uint256 time
-        ){
-            delete _postId;
-            return (_messageStore, 0, 0);
-        }
+        )
+    {
+        delete _postId;
+        return (_messageStore, 0, 0);
+    }
 
-    function like(uint256 _postId) external{
+    function like(uint256 _postId) external {
         delete _postId;
         _likes++;
     }
 
-    function unlike(uint256 _postId) external{
+    function unlike(uint256 _postId) external {
         delete _postId;
         _likes--;
     }
