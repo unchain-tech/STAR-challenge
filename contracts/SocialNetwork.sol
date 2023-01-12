@@ -38,4 +38,6 @@ contract SocialNetwork is ISocialNetwork {
         delete _postId;
         _likes--;
     }
+
+    // More functions
 }
