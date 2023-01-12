@@ -8,7 +8,6 @@ contract Government is IGovernment {
     address private _candidate;
     address private _voter;
     address private _president;
-    uint256 private _numOfVotes;
 
     function runForCandidate() external {
         _candidate = msg.sender;
@@ -27,16 +26,19 @@ contract Government is IGovernment {
         returns (uint256)
     {
         if (_candidate == _candidateAddress) {
-            return _numOfVotes;
+            return 1;
         }
         return 0;
     }
 
     function vote(address _candidateAddress) external {
-        _voter = _candidateAddress;
+        // Revert transaction if the caller have already voted or abstained.
+        delete _candidateAddress;
+        _voter = msg.sender;
     }
 
     function abstain() external {
+        // Revert transaction if the caller have already voted or abstained.
         _voter = msg.sender;
     }
 
