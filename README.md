@@ -40,18 +40,36 @@ $ yarn
 
 ---
 
-このリポジトリは GitHub Actions にてリンターによる解析と hardhat のテストを行っています(`.github/workflows`参照)。
+このリポジトリは GitHub Actions にてリンターとフォーマッターによる解析と hardhat のテストを行っています(`.github/workflows`参照)。
 
--   リンター  
+-   リンター・フォーマッター  
     実行しているコマンドは`.github/workflows/analyze.yml`を, コマンドの内容は`package.json`内を参照してください。
 
 -   hardhat テスト  
-    もし`.github/workflows/hardhat.yml`内に実行しているテストで, 削除したものがあった場合は適宜編集してください。
+    もし`.github/workflows/hardhat.yml`内で実行しているテストの中で, あなたが削除したテストがあった場合は適宜編集してください。
 
 **githooks を設定する** 💁
 
-githooks ファイルが`git-hooks`ディレクトリに保存されているので, 以下コマンドで hooksPath に設定することができます。
+githooks ファイルが`git-hooks`ディレクトリに保存されているので, 以下コマンドで hooksPath に設定することができます。  
+リモートリポジトリへのプッシュ前に自動で解析を走らせ, 修正が必要なコミットのプッシュをキャンセルすることができます。
 
 ```
 $ git config core.hooksPath git-hooks/
+```
+
+**フォーマッターの設定** 💁
+
+`.vscode/settings.json`を作成し, 以下のコードを記述するとファイル保存時に自動でフォーマッターによる整形がされます。
+
+```json
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+}
+```
+
+直接実行する場合は以下のコマンドをルートディレクトリで行います。
+
+```
+$ yarn prettier:format
 ```
