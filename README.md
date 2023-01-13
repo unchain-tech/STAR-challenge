@@ -1,11 +1,10 @@
-
 ---
 
 # starter-project 🚀
 
 STARPASS 提出方法
 
-1. STARPASS-starter-projectをフォークする
+1. STARPASS-starter-project をフォークする
 2. インタフェースを実装
 3. テストが通ることを確認します
 4. 提出
@@ -30,4 +29,3 @@ $ git config core.hooksPath git-hooks/
 2. `contracts` ディレクトリ内にコントラクトを実装する。
 3. ルートにて `yarn test:soc` でテストの実行と通ることを確認する。テストファイルは通るようなサンプル入れておけばいい。
 4. レポジトリを提出
-
