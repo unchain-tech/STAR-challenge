@@ -1,10 +1,12 @@
-### この project について 🚀
+# STARPASS starter-project 🚀
 
 ---
 
-STARPASS のコントラクトに関する starter-project です。
+# STARPASS スタータープロジェクト 🚀
 
-STARPASS を提出する方は, 以下の手順に従いコントラクトの実装・提出を行ってください。
+STARPASS のスマートコントラクトに関する starter-project です。
+
+スマートコントラクトを提出する方は, 以下の手順に従いコントラクトの実装・提出を行ってください。
 
 1. 当レポジトリをフォークし, ローカルにクローンする。
 
@@ -24,7 +26,7 @@ $ yarn
    `Distributed medical database` -> `yarn test:med`  
    `Smart government` -> `yarn test:gov`
 
-4. このリポジトリを提出  
+4. リモートリポジトリに反映させ, リンクを提出  
    bonus は別リポジトリで提出してください。  
    bonus に関してはインタフェース実装などの決まりはありません。必須実装される場合は別のリポジトリとして提出してください。
 
@@ -37,8 +39,6 @@ $ yarn
 -   bonus を実装する場合は別リポジトリにて実装・提出すること。
 
 ### 環境について 💻
-
----
 
 このリポジトリは GitHub Actions にてリンターとフォーマッターによる解析と hardhat のテストを行っています(`.github/workflows`参照)。
 
