@@ -16,6 +16,8 @@ module.exports = {
       "error",
       { ignores: ["modules"] },
     ],
+    "node/no-unpublished-import": "warn",
+    "node/no-missing-import": "warn",
   },
   settings: {
     node: { tryExtensions: [".js", ".json", ".node", ".ts", ".d.ts"] },

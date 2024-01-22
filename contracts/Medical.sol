@@ -64,9 +64,10 @@ contract Medical is IMedical {
     }
 
     // 医師の登録も実装されている
-    function updateDoctorInfo(address _doctorAddress, string memory _name)
-        external
-    {
+    function updateDoctorInfo(
+        address _doctorAddress,
+        string memory _name
+    ) external {
         require(_doctorAddressToId[_doctorAddress] == 0, "already exist."); //未作成時のみ実行可能
         Doctor memory _newDoctor = Doctor(_doctorAddress, _name, _doctorId);
         doctors.push(_newDoctor);
@@ -75,7 +76,9 @@ contract Medical is IMedical {
         _doctorAddressToName[_doctorAddress] = _name; //医師の名前をマッピングで登録
     }
 
-    function getMedicalData(address _patientAddress)
+    function getMedicalData(
+        address _patientAddress
+    )
         external
         view
         returns (
@@ -117,13 +120,7 @@ contract Medical is IMedical {
     function viewPatientProfile()
         external
         view
-        returns (
-            string memory,
-            string memory,
-            uint256,
-            address,
-            string memory
-        )
+        returns (string memory, string memory, uint256, address, string memory)
     {
         require(_patientAddressToId[msg.sender] > 0, "not registered yet");
         uint256 _ownerId = _patientAddressToId[msg.sender] - 1;
@@ -142,11 +139,7 @@ contract Medical is IMedical {
     function viewDoctorProfile()
         external
         view
-        returns (
-            string memory,
-            uint256,
-            address
-        )
+        returns (string memory, uint256, address)
     {
         require(_doctorAddressToId[msg.sender] > 0, " not registered yet");
         uint256 _ownerId = _doctorAddressToId[msg.sender] - 1;

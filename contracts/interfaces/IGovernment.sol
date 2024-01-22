@@ -10,10 +10,9 @@ interface IGovernment {
     function isCandidate(address _verifyAddress) external view returns (bool);
 
     // Returns the number of votes for the candidate passed in the argument.
-    function numberOfVotes(address _candidateAddress)
-        external
-        view
-        returns (uint256);
+    function numberOfVotes(
+        address _candidateAddress
+    ) external view returns (uint256);
 
     // A citizen can vote to candidate.
     // ATTENTION: Revert transaction if the caller have already voted or abstained.

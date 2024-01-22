@@ -125,11 +125,9 @@ contract Government is IGovernment {
         return _winner;
     }
 
-    function numberOfVotes(address _candidateAddress)
-        external
-        view
-        returns (uint256)
-    {
+    function numberOfVotes(
+        address _candidateAddress
+    ) external view returns (uint256) {
         for (uint256 i = 0; i < _candidates.length; i++) {
             if (_candidates[i].candidate == _candidateAddress) {
                 return _candidates[i].numOfVotes;
