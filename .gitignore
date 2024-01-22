@@ -1,13 +1,16 @@
-node_modules
-.env
-coverage
-coverage.json
-package-lock.json
 .vscode
-.DS_Store
-.openzeppelin
+.env
+node_modules
 
 
-#Hardhat files
+# hardhat
 cache
 artifacts
+coverage
+coverage.json
+
+# typechain
+typechain-types
+
+# misc
+.DS_Store

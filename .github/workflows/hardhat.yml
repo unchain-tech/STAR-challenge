@@ -1,0 +1,17 @@
+name: hardhat test
+
+on: [push]
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: setup
+        run: yarn
+      - name: Soc test
+        run: yarn test:soc
+      - name: Med test
+        run: yarn test:med
+      - name: Gov test
+        run: yarn test:gov

@@ -1,0 +1,17 @@
+name: analyze test
+
+on: [push]
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: setup
+        run: yarn
+      - name: lint
+        run: yarn lint
+      - name: solhint
+        run: yarn solhint:check
+      - name: prettier
+        run: yarn prettier:check
