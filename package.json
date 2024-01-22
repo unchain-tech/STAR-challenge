@@ -1,23 +1,22 @@
 {
-  "name": "starpass_review",
+  "name": "unchain-star-challenges",
   "version": "1.0.0",
-  "description": "reviewing UNCHAIN star tests",
-  "main": "index.js",
+  "description": "3 challenges to become an UNCHAIN star",
+  "main": "README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shiftbase-inc/STARPASS-review.git"
+    "url": "git+https://github.com/unchain-tech/STAR-challenge.git"
   },
   "keywords": [],
-  "author": "SHØ <neila@users.noreply.github.com> (http://akxra.art/)",
   "contributors": [
-    "SHØ <neila@users.noreply.github.com> (http://akxra.art/)",
+    "SHØ <neila@users.noreply.github.com> (http://neila.github.io/)",
     "ryojiroakiyama <ryojiro25@gmail.com> (https://github.com/ryojiroakiyama)"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shiftbase-inc/STARPASS-review/issues"
+    "url": "https://github.com/unchain-tech/STAR-challenge/issues"
   },
-  "homepage": "https://github.com/shiftbase-inc/STARPASS-review#readme",
+  "homepage": "https://github.com/unchain-tech/STAR-challenge#readme",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
     "@nomiclabs/hardhat-ethers": "^2.0.6",
