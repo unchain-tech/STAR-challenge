@@ -18,14 +18,12 @@ contract SocialNetwork is ISocialNetwork {
         return _id;
     }
 
-    function getPost(uint256 _postId)
+    function getPost(
+        uint256 _postId
+    )
         external
         view
-        returns (
-            string memory message,
-            uint256 totalLikes,
-            uint256 time
-        )
+        returns (string memory message, uint256 totalLikes, uint256 time)
     {
         console.log(_postId);
         return (_messageStore, 0, 0);

@@ -11,14 +11,12 @@ interface ISocialNetwork {
     function getLastPostId() external view returns (uint256);
 
     // Returns the data of the post by its id.
-    function getPost(uint256 _postId)
+    function getPost(
+        uint256 _postId
+    )
         external
         view
-        returns (
-            string memory message,
-            uint256 totalLikes,
-            uint256 time
-        );
+        returns (string memory message, uint256 totalLikes, uint256 time);
 
     // Like a post by its id.
     function like(uint256 _postId) external;

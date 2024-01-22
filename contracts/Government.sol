@@ -20,11 +20,9 @@ contract Government is IGovernment {
         return false;
     }
 
-    function numberOfVotes(address _candidateAddress)
-        external
-        view
-        returns (uint256)
-    {
+    function numberOfVotes(
+        address _candidateAddress
+    ) external view returns (uint256) {
         console.log(_candidateAddress);
         // finish the function
         return 0;

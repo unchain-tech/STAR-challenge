@@ -17,7 +17,9 @@ contract Medical is IMedical {
         _bloodTypeStore = _bloodType;
     }
 
-    function getMedicalData(address _patientAddress)
+    function getMedicalData(
+        address _patientAddress
+    )
         external
         view
         returns (

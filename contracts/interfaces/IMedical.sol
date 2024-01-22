@@ -8,7 +8,9 @@ interface IMedical {
     function register(string memory _name, string memory _bloodType) external;
 
     // Returns the patient's medical data.
-    function getMedicalData(address _patientAddress)
+    function getMedicalData(
+        address _patientAddress
+    )
         external
         view
         returns (
